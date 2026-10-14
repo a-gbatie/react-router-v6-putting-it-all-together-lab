@@ -19,7 +19,7 @@ const DirectorContainer = () => {
             <main>
                 <h1>Welcome to the Director's Directory!</h1>
                 {/* all director components should render here depending on route */}
-                <Outlet context={{ directors }} />
+                <Outlet context={{ directors, setDirectors }} />
             </main>
         </>
     );
