@@ -1,7 +1,6 @@
 import { Link, Outlet, useParams, useOutletContext } from "react-router-dom";
 
 function DirectorCard() {
-    // Replace me
 const { id } = useParams();
 const { directors } = useOutletContext();
 const director = directors.find((director) => director.id === id);
@@ -18,7 +17,7 @@ const director = directors.find((director) => director.id === id);
         <ul>
             {director.movies.map((movie) => (
             <li key={movie.id}>
-                <a>{movie.title}</a>
+                <Link to={`movies/${movie.id}`}>{movie.title}</Link>
             </li>
             ))}
         </ul>
