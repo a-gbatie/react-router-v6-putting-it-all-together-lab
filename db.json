@@ -123,7 +123,18 @@
     {
       "name": "jafhsj",
       "bio": "ihfau",
-      "movies": [],
+      "movies": [
+        {
+          "id": "fa4d3a7c-499a-4949-b9c3-ad7d91e154b6",
+          "title": "kh afsh ",
+          "time": 180,
+          "genres": [
+            "horror",
+            "romantic",
+            "comedy"
+          ]
+        }
+      ],
       "id": "vEKxF-clqNs"
     }
   ],
