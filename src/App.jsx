@@ -6,6 +6,7 @@ import About from "./pages/About";
 import DirectorContainer from "./pages/DirectorContainer";
 import DirectorCard from "./pages/DirectorCard";
 import DirectorList from "./pages/DirectorList";
+import DirectorForm from "./pages/DirectorForm";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/directors" element={<DirectorContainer />}> 
             <Route index element={<DirectorList />} />
             <Route path=":id" element={<DirectorCard />} />
+            <Route path="new" element={<DirectorForm />} />
         </Route>
         <Route path="/about" element={<About />} />
       </Routes>
