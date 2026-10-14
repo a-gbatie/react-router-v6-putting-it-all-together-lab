@@ -1,17 +1,22 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
-// import NavBar from "./components/NavBar";
-import DirectorContainer from "./pages/DirectorContainer";
 import About from "./pages/About";
+import DirectorContainer from "./pages/DirectorContainer";
+import DirectorCard from "./pages/DirectorCard";
+import DirectorList from "./pages/DirectorList";
 
 const App = () => {
   return (
     <BrowserRouter>
-      {/* <NavBar /> */}
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/directors" element={<DirectorContainer />} />
+        <Route path="/directors" element={<DirectorContainer />}> 
+            <Route index element={<DirectorList />} />
+            <Route path=":id" element={<DirectorCard />} />
+        </Route>
         <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
